@@ -70,7 +70,15 @@ export const Hero = () => {
           className="hidden md:block relative"
         >
           <div className="relative z-10 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl aspect-square glass flex items-center justify-center">
-            <img src="https://picsum.photos/800/800?grayscale" alt="Profile" className="object-cover opacity-60 mix-blend-luminosity hover:opacity-100 transition-opacity duration-500" />
+            <img 
+              src={PERSONAL_INFO.profileImage} 
+              alt="Profile" 
+              className="object-cover opacity-60 mix-blend-luminosity hover:opacity-100 transition-opacity duration-500"
+              onError={(e) => {
+                // Fallback if the user hasn't added their photo yet
+                (e.target as HTMLImageElement).src = 'https://picsum.photos/800/800?grayscale';
+              }} 
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
             <div className="absolute bottom-8 left-8 right-8">
               <div className="glass p-4 rounded-xl border-white/5 flex items-center gap-4">

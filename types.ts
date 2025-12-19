@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   tech: string[];
   link?: string;
+  images?: string[]; // Added for project gallery
 }
 
 export interface Experience {
@@ -13,6 +14,7 @@ export interface Experience {
   role: string;
   description: string;
   projects: Project[];
+  logo?: string; // Added for company logo
 }
 
 export interface Education {
