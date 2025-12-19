@@ -17,7 +17,6 @@
       }
       .mono { font-family: 'JetBrains Mono', monospace; }
       
-      /* Glassmorphism utility */
       .glass {
         background: rgba(17, 24, 39, 0.7);
         backdrop-filter: blur(12px);
@@ -25,12 +24,10 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
       
-      /* Smooth scroll offset */
       html {
         scroll-padding-top: 5rem;
       }
 
-      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -76,5 +73,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- Script entry point mengarah ke main.tsx -->
+    <script type="module" src="./main.tsx"></script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import { Experience, Project } from '../types';
@@ -14,7 +13,8 @@ interface ExperienceCardProps {
   onProjectClick: (project: Project) => void;
 }
 
-export const ExperienceCard = ({ exp, onProjectClick }: ExperienceCardProps) => {
+// Explicitly defining as React.FC ensures 'key' and other standard React props are handled correctly by the type system
+export const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, onProjectClick }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

@@ -1,3 +1,5 @@
+// Import React to provide access to React namespace types
+import React from 'react';
 
 export const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
   if (href.startsWith('#')) {
